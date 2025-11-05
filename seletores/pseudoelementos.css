@@ -1,0 +1,31 @@
+/*Diferente das pseudo-classes, que reagem a estados ou posições, os pseudo-elementos criam elementos dentro do CSS para estilizar partes do conteúdo.
+
+Eles não existem no HTML, mas você consegue aplicar estilos como se fossem elementos reais.
+
+Sintaxe: ::nome-do-pseudo-elemento.*/
+
+
+/*::before - Adiciona conteúdo antes do conteúdo real do elemento.*/
+p::before {
+    content: "Fui adicionado com ::before";
+    background-color: yellow;
+}
+
+
+/*::after - Adiciona conteúdo depois do conteúdo real do elemento.*/
+p::after {
+    content: "Fui adicionado com ::after";
+    background-color: greenyellow;
+}
+
+/*::first-letter - Estiliza a primeira letra de um texto.*/
+h2::first-letter{
+    color: brown;
+    font-size: 5rem;
+    font-weight: bolder;
+}
+
+/*::first-line - Estiliza apenas a primeira linha de um parágrafo.*/
+p::first-line {
+    font-weight: bold;
+}

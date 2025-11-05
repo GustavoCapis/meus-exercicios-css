@@ -3,8 +3,8 @@
 /*Você escreve diretamente no CSS usando : seguido do nome da pseudo-classe.*/
 
 /*hover - quando o mouse passa sobre o elemento aplica os estilos*/
-.col:hover{
-    background-color: aquamarine;
+.col:hover {
+  background-color: aquamarine;
 }
 
 /*focus → quando um input ou botão está ativo (clicado ou tabulado)*/
@@ -13,23 +13,42 @@ input:focus {
   color: white;
 }
 
-/*:active → quando o elemento está sendo clicado*/
+/*active → quando o elemento está sendo clicado*/
 button:active {
-    background-color: darkblue;
-    color: white;
-    transform: scale(0.95); /* dá a sensação de apertar o botão */
+  background-color: darkblue;
+  color: white;
+  transform: scale(0.95); /* dá a sensação de apertar o botão */
 }
 
+/*first-child → seleciona o primeiro filho de um pai.*/
+li:first-child {
+  color: red;
+  font-weight: bold;
+}
 
+/*last-child → seleciona o último filho de um pai.*/
+li:last-child {
+  color: blue;
+  font-style: italic;
+}
 
+/*nth-child(n) → Seleciona o filho de posição “n” (começando do 1).*/
+/* Pode usar números específicos ou fórmulas (2n = todos pares, 2n+1 = todos ímpares).*/
+
+li:nth-child(2) {
+  background-color: yellow;
+}
+
+/*
+Outros recurso que podem ser úteis
+:checked → para estilizar checkboxes e radios marcados
+:disabled → inputs ou botões desativados
+:required → inputs obrigatórios
+:not() → para excluir elementos de um seletor (útil em layouts)
+*/
 
 
 /*------------------------------------------------------------------------*/
-
-
-
-
-
 
 /*Formatação visual do site, ignorar pra essa aula*/
 body {
@@ -37,6 +56,7 @@ body {
   padding: 0px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 18px;
+  background-color: gray;
 }
 
 /*Não se preocupar com isso agora porque é coisa de flex-box*/
@@ -48,18 +68,16 @@ body {
   box-shadow: 0px 4px 0px lightgray;
 }
 
-
 .container {
   display: grid;
   align-items: center;
   grid-template-columns: 1fr 1fr 1fr;
   width: 100%;
   height: 100vh;
-  background-color: gray;
 }
 
 button {
-    font-size: large;
-    margin: 20px;
-    color: green;
+  font-size: large;
+  margin: 20px;
+  color: green;
 }
