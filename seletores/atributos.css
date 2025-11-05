@@ -1,0 +1,33 @@
+/*Seleção exata*/
+/*Seleciona todos os elementos que têm esse atributo com exatamente esse valor.*/
+[meu-atributo="valor"] {
+  color: red;
+}
+
+/*Seleção que contém */
+/*seleciona elementos cujo atributo contém determinado valor.*/
+p[atributo*="valorA"] {
+  color: purple;
+}
+
+/*Seleção que começa*/
+/*[atributo^="valor"] → começa com o valor*/
+
+/*Seleção que termina*/
+/*[atributo$="valor"] → termina com o valor*/
+
+/*Seleção de presença do atributo*/
+/*[atributo] → seleciona todos os elementos que possuem esse atributo, independente do valor.*/
+input[placeholder] {
+    background-color: rgb(0, 0, 0);
+    font-size: large;
+    color: white;
+}
+
+footer {
+    margin: 20px;
+}
+
+button {
+    font-size: 20px;
+}

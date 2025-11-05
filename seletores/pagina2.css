@@ -1,0 +1,53 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+}
+
+/*Seletor de descencência normal*/
+/*seleciona elementos que estão dentro de outros elementos, em qualquer nível*/
+.list-01 a{
+    color: red;
+}
+
+/*Seletor adjacente + */
+/*seleciona um elemento que vem imediatamente depois de outro, no mesmo nível*/
+.list-02 + a {
+    color: red;
+}
+/*Nesse caso ele muda o a da linha 41 que é o próximo item referente ao que estamos mexendo que é a ul*/
+
+/*Seletor descendente por filho direto > */
+/*Seleciona apenas os elementos que são filhos imediatos*/
+.list-03 > li > a{
+    color: red;
+}
+
+
+
+/*Não se preocupar com isso agora porque é coisa de flex-box*/
+.col {
+  align-self: stretch;
+  margin: 1rem 0.5rem 1rem 0.5rem;
+  padding: 3rem;
+  border-radius: 1rem;
+  background-color: white;
+  box-shadow: 0px 4px 0px lightgray;
+}
+
+
+.container {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+  height: 100vh;
+  background-color: gray;
+}
+
+button {
+    font-size: large;
+    margin: 20px;
+    color: green;
+}

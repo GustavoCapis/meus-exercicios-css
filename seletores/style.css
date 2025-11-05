@@ -1,0 +1,35 @@
+/*Seletor universal/coringa: utilize * para aplica a todos os elementos da página*/
+*{
+    padding: 20px;
+}
+
+/*Seletor simples: seleciona pela tag html(p, body, h1, etc...)
+é global para todas as tags iguais*/
+body {
+    background-color: #ccc;
+}
+
+/*Seletor por classe: utiliza a classe que foi atribuida à tag html, sempre antecede . e a alteração é global para todas as classes iguais */
+.center {
+    text-align: center;
+}
+
+.vermelho {
+    color: red;
+}
+
+.fonte-30 {
+    font-size: 30px;
+}
+
+/*Seletor por Id: Utiliza o Id que foi atribuído à tag. Devem ser ÚNICOS, ao contrário das classes*/
+#titulo{
+    color: blue;
+    background-color: yellow;
+}
+/*Classes e IDs NUNCA pode começar com número*/
+
+/*É possível agrupar tags para aplicar estilo em mais de uma*/
+button, footer {
+    color: green;
+}
