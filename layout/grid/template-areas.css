@@ -1,0 +1,62 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 
+Seleciona o container principal e define que será um grid.
+grid-template-areas cria uma "grade nomeada" para posicionar 
+os elementos nas regiões desejadas. 
+Cada linha entre aspas representa uma linha do grid.
+*/
+#container {
+  display: grid;
+
+  /* Define o layout por áreas nomeadas */
+  grid-template-areas:
+    "header header" /* primeira linha: header ocupa 2 colunas */
+    "aside article" /* segunda linha: aside e article lado a lado */
+    "section section" /* terceira linha: section ocupa 2 colunas */
+    "footer footer"; /* quarta linha: footer ocupa 2 colunas */
+
+  gap: 30px; /* Espaçamento entre as células do grid */
+  grid-auto-rows: 200px; /* Altura padrão das linhas criadas automaticamente */
+}
+
+/* 
+Define a área que cada elemento ocupará no grid,
+usando os mesmos nomes definidos em grid-template-areas.
+*/
+
+/* Header ocupa a área 'header' e é centralizado horizontalmente */
+header {
+  grid-area: header;
+  background-color: blueviolet;
+  justify-self: center; /* centraliza o header dentro da célula */
+}
+
+/* Aside ocupa a área 'aside' */
+aside {
+  grid-area: aside;
+  background-color: aqua;
+}
+
+/* Article ocupa a área 'article' */
+article {
+  grid-area: article;
+  background-color: bisque;
+}
+
+/* Section ocupa a área 'section' */
+section {
+  grid-area: section;
+  background-color: chartreuse;
+}
+
+/* Footer ocupa a área 'footer' e é alinhado na parte inferior da célula */
+footer {
+  grid-area: footer;
+  background-color: brown;
+  align-self: end; /* alinha o footer ao final do eixo vertical */
+}

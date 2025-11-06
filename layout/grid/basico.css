@@ -1,0 +1,34 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+.container → define um grid com:
+- 3 colunas, cada uma com no mínimo 200px e no máximo 1 fração do espaço disponível.
+- 2 linhas de 300px de altura.
+- Espaçamento de 20px entre linhas e 30px entre colunas (gap: linhas colunas).
+- place-items: center start → atalho para "align-items: center" (vertical) e "justify-items: start" (horizontal),
+  ou seja, centraliza os itens verticalmente e os alinha à esquerda.
+*/
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    grid-template-rows: 300px 300px;
+    gap: 20px 30px;
+    /* 
+    Alternativas que poderiam ser usadas manualmente:
+    justify-items: center;   → alinha os itens horizontalmente
+    align-items: center;     → alinha os itens verticalmente
+    justify-content: center; → alinha o grid inteiro no eixo principal
+    align-content: center;   → alinha o grid inteiro no eixo cruzado
+    */
+    place-items: center start;
+    /*place-items é atalho para align-items + justify-items 
+    A ordem é: place-items: <align-items> <justify-items>;*/
+}
+
+.item {
+    background-color: aquamarine;
+}
