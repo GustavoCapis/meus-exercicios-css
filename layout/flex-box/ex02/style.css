@@ -1,0 +1,42 @@
+body {
+  background-color: #27272a;
+}
+
+.container {
+  display: flex;
+
+  gap: 10px; /* essa propriedade coloca espaçamento entre os itens sem ter que ficar se preocupando com margin em cada elemento (precisa ser no elemento pai)*/
+
+  height: 600px;
+
+  flex-direction: row; /*Propriedade que também é colocada no elemento pai para ditar como os filhos ficaram dispostos sobre a tela, o column coloca um abaixo do outro, o row coloca um ao lado do outro e tem as opções column-reverse e row-reverse que invetem a ordem dos itens*/
+
+  flex-wrap: nowrap; /*Por padrão, o Flexbox tenta colocar todos os itens em uma única linha mesmo que eles estourem o tamanho do container. O flex-wrap controla se os itens podem quebrar linha ou não. 
+  Os valores que podem ser passados são:
+  nowrap (padrão): todos os itens em uma linha só.
+  wrap: permite quebra de linha, indo pra próxima linha quando necessário.
+  wrap-reverse: quebra de linha na direção contrária.*/
+
+  /* flex-flow: <flex-direction> <flex-wrap>; Serve pra definir a direção dos itens e se eles podem quebrar linha — tudo em uma única linha de código. */
+
+  justify-content: center; /* justify-content alinha os elementos de acordo com o flex-direction, no caso do row: horizontalmente (eixo x) */
+
+  align-items: center; /*geralmente usado em par com o justify-content para alinhar no eixo oposto, nesse caso o eixo y (vertical)*/
+
+  background-color: #6366f1;
+}
+
+.item {
+  width: 200px;
+  height: 200px;
+  background-color: #38bdf8;
+}
+
+.item-1 {
+  order: -1;
+  align-self: flex-start; /*é tipo uma “versão individual” do align-items*/
+}
+
+.item-2 {
+  order: 1; /*Define a ordem em que os itens flex aparecem dentro de um container. Por padrão, todos os itens têm order: 0. Se tu mudar o valor, o navegador reorganiza os elementos de acordo com o número (em ordem crescente).*/
+}

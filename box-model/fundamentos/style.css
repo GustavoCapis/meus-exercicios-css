@@ -1,0 +1,18 @@
+* {
+  box-sizing: border-box;
+/* 
+box-sizing: border-box;
+→ Faz com que o padding e a borda sejam incluídos no tamanho total do elemento.
+→ Exemplo: se width = 200px, o total continua 200px mesmo com padding e border.
+→ Facilita o controle do layout e evita cálculos manuais de espaço.
+→ Padrão seria content-box (que soma padding e border à largura/altura).
+*/
+}
+
+.box {
+  width: 400px;
+  height: 400px;
+  border: dotted 5px rgba(0, 0, 0, 0.7);
+  margin: 16% auto; /*Quando você escreve dois valores em margin, a ordem é: vertical horizontal, ou seja 10% em cima e embaixo e auto à esquerda e direita */
+  padding: 70px 80px; /* A ordem é sempre top-right-bottom-left, então quando top e bottom ou right e left são iguais você pode declarar apenas dois valores. */
+}

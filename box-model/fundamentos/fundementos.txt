@@ -1,0 +1,84 @@
+/* -------------------- BOX MODEL -------------------------------------------
+   Todo elemento em CSS é tratado como uma "caixa" (box).
+   Essa caixa é formada por 4 camadas principais:
+
+   1. content → o conteúdo em si (texto, imagem, etc.)
+   2. padding → espaço interno entre o conteúdo e a borda
+   3. border → a borda que envolve o padding e o conteúdo
+   4. margin → espaço externo entre o elemento e os outros ao redor
+
+   Visualmente:
+   [ margin ]
+     [ border ]
+       [ padding ]
+         [ content ]
+
+   O 'box-sizing' define como o navegador calcula as dimensões da caixa:
+   - content-box (padrão): width e height incluem só o conteúdo.
+   - border-box: width e height incluem conteúdo + padding + border.
+
+   Dica: usar box-sizing: border-box; facilita o controle de layout,
+   pois o tamanho total do elemento não cresce ao adicionar padding/border.
+--------------------------------------------------------------------------- */
+
+/* -------------------- MARGIN, BORDER E PADDING --------------------------
+   Essas três propriedades fazem parte do Box Model e controlam
+   os espaços ao redor e dentro dos elementos.
+
+   ▸ MARGIN → Espaço externo
+     - Cria distância entre o elemento e os outros ao redor.
+     - Não tem cor, é transparente.
+     - Pode ser definido individualmente:
+       margin-top | margin-right | margin-bottom | margin-left
+     - Exemplo: margin: 20px 10px;  → 20px (vertical) e 10px (horizontal)
+
+   ▸ BORDER → A borda da caixa
+     - Fica entre o padding e a margin.
+     - Pode ter cor, espessura e estilo.
+     - Sintaxe: border: [largura] [estilo] [cor];
+       Exemplo: border: 2px solid black;
+     - Estilos comuns: solid, dashed, dotted, double, groove...
+
+   ▸ PADDING → Espaço interno
+     - Cria distância entre o conteúdo e a borda.
+     - Também pode ser definido individualmente:
+       padding-top | padding-right | padding-bottom | padding-left
+     - Exemplo: padding: 10px 20px;  → 10px (vertical) e 20px (horizontal)
+     - Diferente da margin, o padding aumenta o tamanho visível do elemento,
+       a menos que esteja usando box-sizing: border-box;
+
+   ▸ Dica:
+     Sempre pense assim →  conteúdo → padding → border → margin
+--------------------------------------------------------------------- */
+
+/* -------------------- BOX-LEVEL x INLINE-LEVEL --------------------
+   Todo elemento HTML é exibido como uma caixa (box), mas o tipo
+   dessa caixa muda conforme o comportamento do elemento.
+
+   ▸ ELEMENTOS DE NÍVEL DE BLOCO (Block-level)
+     - Ocupam **toda a largura disponível** do container.
+     - Começam sempre em uma **nova linha**.
+     - Podem ter definidas: width, height, margin e padding em todos os lados.
+     - Exemplos: <div>, <section>, <p>, <h1>...<h6>, <ul>, <li>, <footer> etc.
+     - Usados para estruturar o layout (blocos grandes).
+
+     Exemplo visual:
+       [div]---------------------------
+       | ocupa toda a linha          |
+       -------------------------------
+
+   ▸ ELEMENTOS DE NÍVEL INLINE (Inline-level)
+     - Ocupam **apenas o espaço necessário** ao conteúdo.
+     - Não quebram linha automaticamente.
+     - Respeitam apenas margin e padding **horizontal** (left e right).
+     - Não aceitam width e height diretamente.
+     - Exemplos: <span>, <a>, <strong>, <em>, <img> etc.
+     - Usados para destacar partes do texto ou conteúdo pequeno.
+
+     Exemplo visual:
+       [texto <span>em linha</span> continua aqui]
+
+   ▸ Dica:
+     - Você pode mudar o comportamento padrão com a propriedade `display`.
+       Exemplo: display: inline-block; → mistura os dois comportamentos.
+------------------------------------------------------------------- */
